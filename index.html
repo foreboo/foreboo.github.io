@@ -1,37 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
     <head>
         <meta charset="UTF-8" lang="en">
         <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=yes">
         <title>Foreboo</title>
-        <link rel="stylesheet" href="/CSS/topPage.css" type="text/css" media="all">
+        <link rel="stylesheet" href="/commonCSS/base.css" type="text/css" media="all">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap&text=Bamboo Forest" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&display=swap&text=Bamboo Forest" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
     </head>
+    <script type="text/javascript" src="/commonJS/humburgerMenu.js" defer></script>
+    <script type="text/javascript" src="/commonJS/loadPage.js" defer></script>
     <body>
         <!--## Header for Phone ##-->
         <header id="headerForPhone">
             <div class="headerLogo">
-                <img class="headerLogoImg" alt="logo" src="/commonIMG/logo.svg">
+                <img class="headerLogoImg" alt="logo" src="/commonIMG/logo.svg" draggable="false">
                 <span class="headerLogoText" translate="no">Bamboo Forest</span>
             </div>
-            <img id="humburgerButton" src="/commonIMG/humburgerButton.svg">
+            <img id="humburgerButton" src="/commonIMG/humburgerButton.svg" draggable="false">
         </header>
         <!--## Header for PC ##-->
         <header id="headerForPC">
             <div class="headerLogo">
-                <img class="headerLogoImg" alt="logo" src="/commonIMG/logo.svg">
+                <img class="headerLogoImg" alt="logo" src="/commonIMG/logo.svg" draggable="false">
                 <span class="headerLogoText" translate="no">Bamboo Forest</span>
             </div>
+            <ul class="flexCenter">
+                <li><a class="headerLink" href="">About</a></li>
+                <li><a class="headerLink" href="https://github.com/foreboo">GitHub</a></li>
+                <li><a class="headerLink" href="">Blog</a></li>
+                <li><a class="headerLink" href="">Contact Me</a></li>
+            </ul>
         </header>
-        <!-- ## title Banner fo Phone ##-->
-        <img id="titleBannerPhone" class="titleBanner" src="/IMG/titleBannerPhone.JPG" alt="title banner">
-        <!--## Title Banner for PC ##-->
-        <img id="titleBannerPC" class="titleBanner" src="/IMG/titleBannerPC.JPG" alt="title banner">
-        <h1><br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br><br><br><br><br><br>EOF</h1>
+        <!--## Humburgerbutton menu ##-->
+        <ul id="humburgerMenu">
+            <li><a class="humburgerMenuLink" href="">About</a></li>
+            <li><a class="humburgerMenuLink" href="https://github.com/foreboo">GitHub</a></li>
+            <li><a class="humburgerMenuLink" href="">Blog</a></li>
+            <li><a class="humburgerMenuLink" href="">Contact Me</a></li>
+        </ul>
+        
+        <!--## Contents ##-->
+        <div id="mainContentsArea"></div>
+
+        <!--## Footer for Phone ##-->
+        <footer id="footerForPhone">
+            <div class="flexCenter">
+                <a class="footerLink" href="">About</a>
+                <a class="footerLink" href="https://github.com/foreboo">GitHub</a>
+                <a class="footerLink" href="">Blog</a>
+                <a class="footerLink" href="">Contact Me</a>
+            </div>
+            <div class="flexCenter">
+                <img class="footerLogo" alt="logo" src="/commonIMG/roundLogo.svg" draggable="false">
+                <span class="footerCopyRight">&copy;2022 Foreboo</span>
+            </div>
+        </footer>
     </body>
 </html>

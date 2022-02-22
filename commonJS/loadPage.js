@@ -15,13 +15,18 @@
         console.log(url);
         fetch(location.protocol + "//" + url)
         .then(response => {
-            return response.text();
+            if(response.ok) {
+                return response.text();
+            } else {
+                console.error("fetch error");
+                window.location.search = "?page=/HTML/error.html";
+            }
         })
         .then(data => {
             document.querySelector("#mainContentsArea").innerHTML = data;
         })
         .catch(error => {
-            console.log("error");
+            console.error(error);
         });
         //return HTMLdata;
     };
